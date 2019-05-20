@@ -23,10 +23,10 @@
       force: true
     ~/.gitconfig: gitconfig
     ~/.emacs.d: doom-emacs
-    ~/.doom.d/:
-      glob: true
-      path: doom-config/*
+    ~/.doom.d:
+      path: doom-config
       force: true
+      create: true
     ~/.aliases: aliases
 
 - shell:
