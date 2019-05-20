@@ -1,0 +1,9 @@
+[user]
+	email = porrliam@gmail.com
+	name = Liam Porr
+
+[push]
+	default = current
+
+[core]
+	editor = vim
