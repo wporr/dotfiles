@@ -22,7 +22,9 @@
       path: config/*
       force: true
     ~/.gitconfig: gitconfig
-    ~/.emacs.d: doom-emacs
+    ~/.emacs.d: 
+      path: doom-emacs
+      force: true
     ~/.doom.d:
       path: doom-config
       force: true
