@@ -1,6 +1,9 @@
 alias dotfetch='bash <(wget -o /dev/null -O- https://raw.githubusercontent.com/d00ble/dotfiles/master/get.sh)'
+alias chat='tmux attach -t weechat'
 
 # Kubernetes on OCF
 alias kctl='kubectl -n dev-wporr'
 alias kgd='kubectl -n dev-wporr get deployments'
 alias kgs='kubectl -n dev-wporr get services'
+
+
