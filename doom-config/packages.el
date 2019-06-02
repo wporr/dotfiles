@@ -6,5 +6,6 @@
 ;; (package! another-package :recipe (:fetcher github :repo "username/repo"))
 ;; (package! builtin-package :disable t)
 (package! puppet-mode)
+(package! cuda-mode)
 (package! doom-themes)
 (package! all-the-icons)

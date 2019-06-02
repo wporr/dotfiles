@@ -18,3 +18,12 @@
 
 ;; Corrects (and improves) org-mode's native fontification.
 (doom-themes-org-config)
+
+;; Syntax highlighting
+(add-to-list 'auto-mode-alist '("\\.pp\\'" . puppet-mode))
+(add-to-list 'auto-mode-alist '("\\.cu\\'" . cuda-mode))
+
+;; Cuda debugger
+(setenv "PATH" (concat (getenv "PATH") ":/usr/bin/cuda-gdb"))
+(setq exec-path (append exec-path '("/usr/bin/cuda-gdb")))
+(setq gud-gdb-command-name "cuda-gdb --annotate=3")

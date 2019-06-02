@@ -156,5 +156,3 @@
        ;; provides a Spacemacs-inspired keybinding scheme and a smartparens
        ;; config. Use it as a reference for your own modules.
        (default +bindings +smartparens))
-
-(add-to-list 'auto-mode-alist '("\\.pp\\'" . puppet-mode))
