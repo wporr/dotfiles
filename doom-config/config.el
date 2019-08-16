@@ -22,6 +22,7 @@
 ;; Syntax highlighting
 (add-to-list 'auto-mode-alist '("\\.pp\\'" . puppet-mode))
 (add-to-list 'auto-mode-alist '("\\.cu\\'" . cuda-mode))
+(add-to-list 'auto-mode-alist '("\\.tpp\\'" . c-mode))
 
 ;; Cuda debugger
 (setenv "PATH" (concat (getenv "PATH") ":/usr/bin/cuda-gdb"))
