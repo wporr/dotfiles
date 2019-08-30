@@ -1,3 +1,5 @@
+. .aliases
+
 til() {
     hostname=`hostname`
     
@@ -11,3 +13,4 @@ til() {
 DOOM=~/.emacs.d/bin/
 export GOPATH=$HOME/go
 export PATH=$PATH":$DOOM:$GOPATH/bin"
+export EDITOR=vim
