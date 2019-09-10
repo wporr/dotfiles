@@ -22,7 +22,7 @@
       path: config/*
       force: true
     ~/.gitconfig: gitconfig
-    ~/.emacs.d: 
+    ~/.emacs.d:
       path: doom-emacs
       force: true
     ~/.doom.d:
@@ -30,10 +30,23 @@
       force: true
       create: true
     ~/.aliases: aliases
+    ~/.Xmodmap:
+      force: true
+      path: Xmodmap
+    ~/.Xdefaults:
+      force: true
+      path: Xdefaults
+    ~/.vimrc:
+      force: true
+      path: vimrc
+    ~/.vim: vim
+    ~/.tmux.conf:
+      force: true
+      path: tmux.conf
 
 - shell:
   - [. ~/.bashrc, Sourcing new bashrc]
-  - 
+  -
     command: doom quickstart
     stdin: true
     stdout: true

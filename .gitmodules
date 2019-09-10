@@ -5,3 +5,6 @@
 	path = doom-emacs
 	url = https://github.com/hlissner/doom-emacs
 	branch = develop
+[submodule "vim/bundle/Vundle.vim"]
+	path = vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git

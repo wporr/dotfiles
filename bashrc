@@ -1,8 +1,8 @@
-. .aliases
+. ~/.aliases
 
 til() {
     hostname=`hostname`
-    
+
     if [ $hostname = 'alamo' ]; then
         echo $1 >> ~/til.txt
     else

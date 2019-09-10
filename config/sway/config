@@ -9,20 +9,20 @@
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
-
 set $left h
 set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-#set $term termite
 set $term urxvt
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu dmenu_path | dmenu -nb '#000000' -sf '#000000' -sb '#55AF7B' -nf '#55AF7B' | xargs i3-msg exec
+set $menu dmenu_path | dmenu -nb '#000000' -sf '#000000' -sb '#55AF7B' -nf '#55AF7B' | xargs swaymsg exec
 
 ### Output configuration
 #
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+output * bg /usr/share/backgrounds/anime_girl.jpg fill
 #
 # Example configuration:
 #
@@ -31,7 +31,7 @@ set $menu dmenu_path | dmenu -nb '#000000' -sf '#000000' -sb '#55AF7B' -nf '#55A
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Idle configuration
- exec swayidle -w           timeout 300 'swaylock -f -c 000000'           timeout 10000 'swaymsg "output * dpms off"'                resume 'swaymsg "output * dpms on"'           before-sleep 'swaylock -f -c 000000'
+exec swayidle -w           timeout 300 'swaylock -f -c 000000'           timeout 10000 'swaymsg "output * dpms off"'                resume 'swaymsg "output * dpms on"'           before-sleep 'swaylock -f -c 000000'
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -50,12 +50,14 @@ set $menu dmenu_path | dmenu -nb '#000000' -sf '#000000' -sb '#55AF7B' -nf '#55A
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+    tap enabled
+    natural_scroll enabled
+}
 
-# Screen orientation
-exec --no-startup-id xrandr --output DVI-D-0 --right-of HDMI-0 --auto
-workspace 1 output HDMI-0
-workspace 2 output DVI-D-0
-
+input * {
+    xkb_options caps:swapescape
+}
 
 ### Key bindings
 #
@@ -75,13 +77,13 @@ workspace 2 output DVI-D-0
     # Despite the name, also works for non-floating windows.
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
-    floating_modifier $mod
+    floating_modifier $mod normal
 
     # reload the configuration file
     bindsym $mod+Shift+c reload
 
     # exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3?' -b 'Yes, exit i3' 'i3-msg exit'
+    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -228,3 +230,5 @@ client.focused          #55AF7B #000000 #ffffff #2b2b2b   #55AF7B
 client.focused_inactive #888888 #030404 #ffffff #2b2b2b   #888888
 client.unfocused        #888888 #030404 #ffffff #2b2b2b   #888888
 client.urgent           #900000 #900000 #ffffff #2b2b2b   #900000
+include /etc/sway/config.d/*
+

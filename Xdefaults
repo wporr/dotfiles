@@ -1,42 +1,42 @@
 ! special
-*.foreground:   #bcd6d9
-*.background:   #090b0c
-*.cursorColor:  #bcd6d9
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
 
 ! black
-*.color0:       #101414
-*.color8:       #b4ac7a
+*.color0:       #1d1f21
+*.color8:       #969896
 
 ! red
-*.color1:       #181e1e
-*.color9:       #7ecc98
+*.color1:       #cc342b
+*.color9:       #cc342b
 
 ! green
-*.color2:       #282f30
-*.color10:      #71c6cc
+*.color2:       #198844
+*.color10:      #198844
 
 ! yellow
-*.color3:       #3e4848
-*.color11:      #e7a69e
+*.color3:       #fba922
+*.color11:      #fba922
 
 ! blue
-*.color4:       #596668
-*.color12:      #8cd7a4
+*.color4:       #3971ed
+*.color12:      #3971ed
 
 ! magenta
-*.color5:       #7a8b8d
-*.color13:      #9be3e9
+*.color5:       #a36ac7
+*.color13:      #a36ac7
 
 ! cyan
-*.color6:       #a0b7b9
-*.color14:      #6bc98b
+*.color6:       #3971ed
+*.color14:      #3971ed
 
 ! white
-*.color7:       #d0e7e9
-*.color15:      #72efa0
+*.color7:       #c5c8c6
+*.color15:      #ffffff
 
 !! URxvt Appearance
-URxvt.font: xft:Hack:style=Regular
+URxvt.font: xft:Hack:style=Regular:size=11
 URxvt.boldFont: xft:Hack:style=Bold
 URxvt.italicFont: xft:Hack:style=Italic
 URxvt.boldItalicfont: xft:Hack:style=Bold Italic
@@ -53,7 +53,7 @@ URxvt.urgentOnBell: true
 URxvt.depth: 24
 URxvt.iso14755: false
 
-!! Common Keybinds for Navigations
+! Common Keybinds for Navigations
 URxvt.keysym.Shift-Up: command:\033]720;1\007
 URxvt.keysym.Shift-Down: command:\033]721;1\007
 URxvt.keysym.Control-Up: \033[1;5A
@@ -61,7 +61,7 @@ URxvt.keysym.Control-Down: \033[1;5B
 URxvt.keysym.Control-Right: \033[1;5C
 URxvt.keysym.Control-Left: \033[1;5D
 
-!! Copy Paste & Other Extensions
+! Copy Paste & Other Extensions
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.pasteCommand: xclip -o -selection clipboard
