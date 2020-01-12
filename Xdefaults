@@ -36,7 +36,7 @@
 *.color15:      #ffffff
 
 !! URxvt Appearance
-URxvt.font: xft:Hack:style=Regular:size=11
+URxvt.font: xft:Hack:style=Regular:size=13
 URxvt.boldFont: xft:Hack:style=Bold
 URxvt.italicFont: xft:Hack:style=Italic
 URxvt.boldItalicfont: xft:Hack:style=Bold Italic

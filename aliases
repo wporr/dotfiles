@@ -12,3 +12,5 @@ alias kgs='kubectl -n dev-wporr get services'
 
 alias update-shutdown='sudo pacman -Syu && sudo shutdown now'
 
+alias screenshot='grim -g "$(slurp)" ~/Pictures/"$(date +%F_%R:%S)".png'
+
