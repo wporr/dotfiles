@@ -17,21 +17,7 @@
     ~/.bash_profile:
       force: true
       path: bash_profile
-    ~/.bin:
-      force: true
-      path: bin
-    ~/.config/:
-      glob: true
-      path: config/*
-      force: true
     ~/.gitconfig: gitconfig
-    ~/.emacs.d:
-      path: doom-emacs
-      force: true
-    ~/.doom.d:
-      path: doom-config
-      force: true
-      create: true
     ~/.aliases: aliases
     ~/.Xmodmap:
       force: true
@@ -45,17 +31,6 @@
     ~/.vim:
       force: true
       path: vim
-    ~/.tmux.conf:
-      force: true
-      path: tmux.conf
-    ~/.tmux:
-      force: true
-      path: tmux
 
 - shell:
   - [. ~/.bashrc, Sourcing new bashrc]
-  -
-    command: doom quickstart
-    stdin: true
-    stdout: true
-    description: Bootstrapping doom-emacs
