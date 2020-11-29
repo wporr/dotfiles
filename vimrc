@@ -134,3 +134,4 @@ set showmode
 
 " Toggle line numbers with F3
 nnoremap <F3> :set norelativenumber! nonumber!<CR>
+let g:go_version_warning = 0

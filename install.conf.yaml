@@ -8,9 +8,6 @@
   - [git submodule update --init --recursive, Installing submodules]
 
 - link:
-    ~/.vimrc:
-      force: true
-      path: vimrc
     ~/.bashrc:
       force: true
       path: bashrc
