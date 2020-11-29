@@ -2,7 +2,6 @@
 set nocompatible "Needed by Vundle
 filetype off "Needed by Vundle
 set rtp+=~/.vim/bundle/Vundle.vim "Add Vundle to runtime path
-set rtp+=~/.fzf
 
 call vundle#begin()
   Plugin 'VundleVim/Vundle.vim' "Vundle
@@ -22,7 +21,8 @@ call vundle#begin()
   Plugin 'fatih/vim-go' " golang support
   Plugin 'leafgarland/typescript-vim' " typescript highlighting
   Plugin 'Quramy/tsuquyomi' " typescript autocompletion
-  Plugin 'junegunn/fzf.vim'
+  Plugin 'junegunn/fzf' " fzf binaries
+  Plugin 'junegunn/fzf.vim' " fzf vim config
 call vundle#end()
 
 " Set up colorscheme
