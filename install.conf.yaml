@@ -25,13 +25,6 @@
       path: config/*
       force: true
     ~/.gitconfig: gitconfig
-    ~/.emacs.d:
-      path: doom-emacs
-      force: true
-    ~/.doom.d:
-      path: doom-config
-      force: true
-      create: true
     ~/.aliases: aliases
     ~/.Xmodmap:
       force: true
@@ -54,8 +47,3 @@
 
 - shell:
   - [. ~/.bashrc, Sourcing new bashrc]
-  -
-    command: doom quickstart
-    stdin: true
-    stdout: true
-    description: Bootstrapping doom-emacs
