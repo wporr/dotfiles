@@ -23,6 +23,7 @@ call vundle#begin()
   Plugin 'leafgarland/typescript-vim' " typescript highlighting
   Plugin 'Quramy/tsuquyomi' " typescript autocompletion
   Plugin 'junegunn/fzf.vim'
+  Plugin 'junegunn/fzf'
 call vundle#end()
 
 " Set up colorscheme

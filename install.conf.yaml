@@ -17,9 +17,6 @@
     ~/.bash_profile:
       force: true
       path: bash_profile
-    ~/.bin:
-      force: true
-      path: bin
     ~/.config/:
       glob: true
       path: config/*
