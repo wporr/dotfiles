@@ -49,6 +49,9 @@ let g:ycm_confirm_extra_conf = 0
 " fzf ctrl+p compatibily
 nnoremap <C-p> :Files<Cr>
 
+" fzf file search
+nnoremap <C-f> :Rg<Cr>
+
 " Sets line numbers
 set number
 
