@@ -24,6 +24,7 @@ call vundle#begin()
   Plugin 'Quramy/tsuquyomi' " typescript autocompletion
   Plugin 'junegunn/fzf.vim'
   Plugin 'junegunn/fzf'
+  Plugin 'glench/vim-jinja2-syntax' " Jinja2 syntax highlighting
 call vundle#end()
 
 " Set up colorscheme
@@ -51,6 +52,9 @@ nnoremap <C-p> :Files<Cr>
 
 " fzf file search
 nnoremap <C-f> :Rg<Cr>
+
+" This prevents Rg from also searching for file names, which is what :Files is
+" for
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 " Sets line numbers
@@ -58,9 +62,9 @@ set number
 
 " Tab key adds 4 spaces,
 " pushing delete will delete the 4 spaces as if it were a tab character
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 
 " Fix my backspaces
@@ -118,6 +122,7 @@ autocmd BufNewFile,BufRead *.ts set expandtab tabstop=2 softtabstop=2 shiftwidth
 autocmd BufNewFile,BufRead *.js set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.html set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.css set expandtab tabstop=2 softtabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead *.py set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 
 "Save as sudo with w!! (when lacking root)
 cmap w!! w !sudo tee % >/dev/null
