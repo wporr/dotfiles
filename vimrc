@@ -121,8 +121,8 @@ autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
 autocmd BufNewFile,BufRead *.ts set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.js set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.html set expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd BufNewFile,BufRead *.css set expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd BufNewFile,BufRead *.py set expandtab tabstop=2 softtabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead *.css set expandtab tabstop=4 softtabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead *.py set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 
 "Save as sudo with w!! (when lacking root)
 cmap w!! w !sudo tee % >/dev/null
