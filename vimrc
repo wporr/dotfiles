@@ -25,6 +25,8 @@ call vundle#begin()
   Plugin 'junegunn/fzf.vim'
   Plugin 'junegunn/fzf'
   Plugin 'glench/vim-jinja2-syntax' " Jinja2 syntax highlighting
+  Plugin 'PyCQA/flake8' " Python style enforcement
+  Plugin 'nvie/vim-flake8' " flake8 vim config
 call vundle#end()
 
 " Set up colorscheme
@@ -66,6 +68,10 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+
+" for yaml
+autocmd BufNewFile,BufRead *.yaml set expandtab tabstop=4 softtabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead *.yml set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 
 " Fix my backspaces
 set backspace=indent,eol,start
@@ -114,15 +120,6 @@ filetype indent on
 " Delete trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
-" Don't expand tabs on Makefile
-autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
-
-" JS/TS/HTML
-autocmd BufNewFile,BufRead *.ts set expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd BufNewFile,BufRead *.js set expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd BufNewFile,BufRead *.html set expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd BufNewFile,BufRead *.css set expandtab tabstop=4 softtabstop=4 shiftwidth=4
-autocmd BufNewFile,BufRead *.py set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 
 "Save as sudo with w!! (when lacking root)
 cmap w!! w !sudo tee % >/dev/null
