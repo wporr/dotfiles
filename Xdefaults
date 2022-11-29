@@ -36,10 +36,8 @@
 *.color15:      #ffffff
 
 !! URxvt Appearance
-URxvt.font: xft:Hack:style=Regular:size=13
-URxvt.boldFont: xft:Hack:style=Bold
-URxvt.italicFont: xft:Hack:style=Italic
-URxvt.boldItalicfont: xft:Hack:style=Bold Italic
+URxvt.font:     xft:bitstream vera sans mono:size=16:antialias=true
+URxvt.boldFont: xft:bitstream vera sans mono:bold:size=16:antialias=true
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 URxvt.geometry: 92x24

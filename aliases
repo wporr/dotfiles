@@ -10,7 +10,10 @@ alias kctl='kubectl -n dev-wporr'
 alias kgd='kubectl -n dev-wporr get deployments'
 alias kgs='kubectl -n dev-wporr get services'
 
-alias update-shutdown='sudo pacman -Syu && sudo shutdown now'
+alias update-shutdown='sudo apt update -y && shutdown now'
 
 alias screenshot='grim -g "$(slurp)" ~/Pictures/"$(date +%F_%R:%S)".png'
 
+alias kdenlive='~/kdenlive/kdenlive-20.12.3a-x86_64.appimage'
+
+alias killsc='kill `pgrep swayidle`'

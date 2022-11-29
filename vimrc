@@ -62,11 +62,11 @@ command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-hea
 " Sets line numbers
 set number
 
-" Tab key adds 4 spaces,
-" pushing delete will delete the 4 spaces as if it were a tab character
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+" Tab key adds 2 spaces,
+" pushing delete will delete the 2 spaces as if it were a tab character
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 
 " for yaml
@@ -102,9 +102,6 @@ set smarttab
 " Case insensitive search, except with capital letters
 set ignorecase
 set smartcase
-
-" No backup
-set noswapfile
 
 " Show commands
 set showcmd
